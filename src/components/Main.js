@@ -22,7 +22,6 @@ const Main = () => {
     fetch(`${process.env.REACT_APP_API_BASE_URL}/products`)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         setProduct(data);
       });
   };

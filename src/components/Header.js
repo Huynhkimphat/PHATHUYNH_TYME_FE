@@ -40,7 +40,7 @@ const Header = () => {
               Connect Wallet
             </button>
             <button
-              className="font-medium text-xl hover:bg-[#DA458F] rounded-lg p-2 flex gap-2 justify-center items-center md:hidden "
+              className="font-medium text-lg hover:bg-[#DA458F] rounded-lg p-2 flex gap-2 justify-center items-center md:hidden "
               onClick={() => setIsMenuShow(!isMenuShow)}
             >
               <RxHamburgerMenu />

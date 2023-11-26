@@ -20,7 +20,7 @@
 - [Overview](#overview)
   - [Built With](#built-with)
   - [Download Project](#download-project)
-    - [Step 1 : Install Nodejs and OracleDB and git](#step-1--install-nodejs-and-oracledb-and-git)
+    - [Step 1 : Install Nodejs and git](#step-1--install-nodejs-and-git)
     - [Step 2 : Clone Project](#step-2--clone-project)
     - [Step 3 : Install Package](#step-3--install-package)
     - [Step 4 : Create .env file](#step-4--create-env-file)

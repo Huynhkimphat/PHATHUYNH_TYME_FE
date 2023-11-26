@@ -24,7 +24,7 @@ const Product = ({ data, isHidden }) => {
       break;
   }
   return (
-    <div className={`w-[80%] scale-60 sm:scale-75 hover:scale-85 sm:hover:scale-95 sm:w-1/2 md:w-1/3 lg:w-1/4 rounded bg-[#3A3841] flex flex-col justify-center items-center hover:font-bold cursor-pointer ${isHidden && 'hidden'}`}>
+    <div className={`pb-2 px-2 w-[80%] scale-60 sm:scale-75 hover:scale-85 sm:hover:scale-95 sm:w-1/2 md:w-1/3 lg:w-1/4 rounded bg-[#3A3841] flex flex-col justify-center items-center hover:font-bold cursor-pointer ${isHidden && 'hidden'}`}>
       {/* img */}
       <div className={`m-2 rounded ${gradientColor}`}>
         <img src={require("../assets/img/" + data.img)} alt="" />
@@ -36,7 +36,7 @@ const Product = ({ data, isHidden }) => {
       </div>
       {/* author */}
       <div className="flex items-center justify-between gap-2 w-full p-2">
-        <div className="flex">
+        <div className="flex gap-x-2 items-center justify-center">
           <img
             className="w-[20px] h-[20px]"
             src={require("../assets/img/" + data.author.img)}

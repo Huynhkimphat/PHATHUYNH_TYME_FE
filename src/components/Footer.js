@@ -62,7 +62,7 @@ const Footer = () => {
           </div>
         </div>
         {/* Break */}
-        <hr class="h-px my-8 bg-gray-200 border-0 w-full" />
+        <hr className="h-px my-8 bg-gray-200 border-0 w-full" />
         {/* Footer 2 */}
         <div className="flex justify-center md:justify-between text-sm mt-2 mx-12 w-[80%]">
           <div>©2023 Tyme - Edit. All Rights reserved.</div>

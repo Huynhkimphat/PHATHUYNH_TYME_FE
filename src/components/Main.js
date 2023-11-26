@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Filter from "./Filter";
 import Content from "./Content";
-import product from "../assets/data/data.json";
 
 const Main = () => {
+  const [product, setProduct] = useState([]);
   const [data, setData] = useState(product);
   const [reload, setReload] = useState(false);
   const [defaultFilter, setDefaultFilter] = useState({
@@ -17,9 +17,20 @@ const Main = () => {
   const handleChangeFilter = (filter) => {
     setDefaultFilter(filter);
   };
+
+  const fetchData = () => {
+    fetch(`${process.env.REACT_APP_API_BASE_URL}/products`)
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        setProduct(data);
+      });
+  };
+
   useEffect(() => {
+    fetchData();
     const interval = setInterval(() => {
-      setData(product);
+      fetchData();
       setReload(true);
     }, 60000);
     return () => clearInterval(interval);
@@ -53,7 +64,7 @@ const Main = () => {
     }
     setReload(false);
     setData(prepareData);
-  }, [defaultFilter, reload]);
+  }, [defaultFilter, reload, product]);
   return (
     <div className="w-full my-16">
       <div

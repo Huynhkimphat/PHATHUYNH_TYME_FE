@@ -47,7 +47,7 @@ const Content = ({ product }) => {
   }, [tierActive, product]);
 
   return (
-    <div class=" pl-4 w-full lg:w-3/4 flex flex-col items-center justify-center lg:items-start">
+    <div className=" pl-4 w-full lg:w-3/4 flex flex-col items-center justify-center lg:items-start">
       {/* Tag */}
       <div className="flex gap-2 flex-wrap">
         {tiers.map((item) => (
@@ -66,9 +66,13 @@ const Content = ({ product }) => {
       </div>
       {/* Product */}
       <div className="mt-4 flex flex-wrap w-full gap-y-4 sm:gap-y-0 justify-center sm:justify-start min-h-[50vh]">
-        {renderData.map((data, index) => (
-          <Product data={data} isHidden={!showAll && index > 7} />
-        ))}
+        {renderData && renderData.length > 0 ? (
+          renderData.map((data, index) => (
+            <Product key={index} data={data} isHidden={!showAll && index > 7} />
+          ))
+        ) : (
+          <span>OOPS – NO RESULTS</span>
+        )}
       </div>
       <div className="flex justify-center items-center mt-4 w-full">
         <button

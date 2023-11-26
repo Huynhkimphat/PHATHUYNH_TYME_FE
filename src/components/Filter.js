@@ -43,7 +43,7 @@ const Filter = ({ filter, handleFilter }) => {
           type="text"
           value={min}
           onChange={(e) => setMin(e.target.value)}
-          class="bg-transparent p-2 outline-none border-2 border-none w-2/3"
+          className="bg-transparent p-2 outline-none border-2 border-none w-2/3"
         />
         <span>ETH</span>
       </div>
@@ -53,19 +53,20 @@ const Filter = ({ filter, handleFilter }) => {
           type="text"
           value={max}
           onChange={(e) => setMax(e.target.value)}
-          class="bg-transparent p-2 outline-none border-2 border-none w-2/3"
+          className="bg-transparent p-2 outline-none border-2 border-none w-2/3"
         />
         <span>ETH</span>
       </div>
       <div className="hover:text-[#DA458F] border-2 flex gap-2 justify-around items-center rounded hover:border-[#DA458F]">
         <select
-          class="p-2 rounded-lg w-full bg-gray-50  dark:bg-black outline-none border-none"
+          className="p-2 rounded-lg w-full bg-gray-50  dark:bg-black outline-none border-none"
+          defaultValue={"default"}
           value={tier}
           onChange={(e) => {
             setTier(e.target.value);
           }}
         >
-          <option selected value="default">
+          <option value="default">
             Choose a tier
           </option>
           <option value="legendary">Legendary</option>
@@ -77,13 +78,14 @@ const Filter = ({ filter, handleFilter }) => {
       </div>
       <div className="hover:text-[#DA458F] rounded border-2 flex gap-2 justify-around items-center hover:border-[#DA458F]">
         <select
-          class="p-2 rounded-lg w-full bg-gray-50  dark:bg-black outline-none border-none"
+          className="p-2 rounded-lg w-full bg-gray-50  dark:bg-black outline-none border-none"
           value={priceSort}
+          defaultValue={"default"}
           onChange={(e) => {
             setPriceSort(e.target.value);
           }}
         >
-          <option selected value="default">
+          <option value="default">
             Choose a price sort
           </option>
           <option value="higher">Low to High</option>

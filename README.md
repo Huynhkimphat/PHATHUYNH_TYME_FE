@@ -1,70 +1,89 @@
-# Getting Started with Create React App
+<h1 align="center">Phat Huynh Tyme FE</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+<div align="center">
+  <h3>
+    <a href="https://phathuynh-tyme-fe.vercel.app/">
+      Demo
+    </a>
+    <span> | </span>
+    <a href="https://github.com/Huynhkimphat/PHATHUYNH_TYME_FE">
+      Solution
+    </a>
+  </h3>
+</div>
+<!-- TABLE OF CONTENTS -->
 
-In the project directory, you can run:
+## Table of Contents
 
-### `npm start`
+- [Table of Contents](#table-of-contents)
+- [Overview](#overview)
+  - [Built With](#built-with)
+  - [Download Project](#download-project)
+    - [Step 1 : Install Nodejs and OracleDB and git](#step-1--install-nodejs-and-oracledb-and-git)
+    - [Step 2 : Clone Project](#step-2--clone-project)
+    - [Step 3 : Install Package](#step-3--install-package)
+    - [Step 4 : Create .env file](#step-4--create-env-file)
+    - [Step 5 : Run Project](#step-5--run-project)
+- [What I have done](#what-i-have-done)
+- [Some Improvement](#some-improvement)
+- [Contact](#contact)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Overview
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Built With
 
-### `npm test`
+- [HTML](https://en.wikipedia.org/wiki/HTML)
+- [CSS](https://en.wikipedia.org/wiki/CSS) 
+- [JS](https://en.wikipedia.org/wiki/JavaScript)
+- [ReactJS](https://react.dev/)
+- [TailwindCSS](https://tailwindcss.com/)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Download Project
+#### Step 1 : Install Nodejs and git
+- [Nodejs](https://nodejs.org/en/)
 
-### `npm run build`
+- [Git](https://git-scm.com/)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### Step 2 : Clone Project
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Git clone https://github.com/Huynhkimphat/PHATHUYNH_TYME_FE
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### Step 3 : Install Package
+- npm i
 
-### `npm run eject`
+#### Step 4 : Create .env file
+    REACT_APP_API_BASE_URL = https://phathuynh-tyme-be.onrender.com
+    
+    Or With you run with BE, change it to 
+    REACT_APP_API_BASE_URL = http://localhost:3001
+  
+#### Step 5 : Run Project
+- IF you use the backend server which I have deploy: https://phathuynh-tyme-be.onrender.com/products => just create the .env file 
+- IF you want to use http://localhost:3001, please clone the BE project and follow the 'run project' in [Backend Project](https://github.com/Huynhkimphat/PHATHUYNH_TYME_BE)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- THEN, npm start
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## What I Have Done
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Implement project using reactJS, tailwindCSS and react-icons
+- Build an UI similar with the figma in document: [Figma](https://www.figma.com/file/5vYZWIUgTNJ1Ud7RfV2zq4) (#4 in requirement)
+- With products, I used an `useEffect` hook to make an Interval to refresh data from Backend every 60 seconds (#3 in requirement)
+- With products display, I init the see more button in order to load more data (#2 in requirement)
+- With the search and filter I have use some hooks and function below: (#1 in requirement)
+    - use `useRef` to store input value from search input
+    - use `useState` to store value in min price, max price, tier selection and price sort selection
+    - reset all filter when click on reset filter button
+    - apply filter to search when click on search button
+- Addition, With the UI, I also implement the responsive for the UI (mobile, ipad, desktop)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Some Improvement
+- Filter when in mobile mode
+- Color for the banner - because I cannot export the background in the banner in figma file because it is a block, so I colored gray for the background of this banner.
+- Create more page for `about us`, `marketplace`, `our team`, `roadmap`, `white paper`
+- Create function when click on `Connect Wallet` Button at header and `Subscribe` Button at footer
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Contact
+- Github : [Huynhkimphat](https://github.com/Huynhkimphat)
+- Email :   kimphat.devcs@gmail.com
